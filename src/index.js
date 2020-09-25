@@ -7,7 +7,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="container">
-                <div className="title">ESG</div>
+                <div className="title">ESG_Rating_App</div>
             </div>
         );
     }
