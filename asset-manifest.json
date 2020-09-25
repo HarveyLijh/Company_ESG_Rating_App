@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/Company_ESG_Rating_App/static/css/main.5f361e03.chunk.css",
-    "main.js": "/Company_ESG_Rating_App/static/js/main.86aeb181.chunk.js",
-    "main.js.map": "/Company_ESG_Rating_App/static/js/main.86aeb181.chunk.js.map",
-    "runtime-main.js": "/Company_ESG_Rating_App/static/js/runtime-main.776abe2c.js",
-    "runtime-main.js.map": "/Company_ESG_Rating_App/static/js/runtime-main.776abe2c.js.map",
-    "static/js/2.39942fb2.chunk.js": "/Company_ESG_Rating_App/static/js/2.39942fb2.chunk.js",
-    "static/js/2.39942fb2.chunk.js.map": "/Company_ESG_Rating_App/static/js/2.39942fb2.chunk.js.map",
+    "main.css": "/Company_ESG_Rating_App/static/css/main.0f93a89c.chunk.css",
+    "main.js": "/Company_ESG_Rating_App/static/js/main.5818afa7.chunk.js",
+    "main.js.map": "/Company_ESG_Rating_App/static/js/main.5818afa7.chunk.js.map",
+    "runtime-main.js": "/Company_ESG_Rating_App/static/js/runtime-main.dea67e97.js",
+    "runtime-main.js.map": "/Company_ESG_Rating_App/static/js/runtime-main.dea67e97.js.map",
+    "static/js/2.a706f759.chunk.js": "/Company_ESG_Rating_App/static/js/2.a706f759.chunk.js",
+    "static/js/2.a706f759.chunk.js.map": "/Company_ESG_Rating_App/static/js/2.a706f759.chunk.js.map",
     "index.html": "/Company_ESG_Rating_App/index.html",
-    "precache-manifest.cdcda1fa59ff23c5c96635003c0153e7.js": "/Company_ESG_Rating_App/precache-manifest.cdcda1fa59ff23c5c96635003c0153e7.js",
+    "precache-manifest.2dd356754f722249381b2fd8706ce322.js": "/Company_ESG_Rating_App/precache-manifest.2dd356754f722249381b2fd8706ce322.js",
     "service-worker.js": "/Company_ESG_Rating_App/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/Company_ESG_Rating_App/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.39942fb2.chunk.js.LICENSE.txt": "/Company_ESG_Rating_App/static/js/2.39942fb2.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/Company_ESG_Rating_App/static/media/logo.5d5d9eef.svg"
+    "static/css/main.0f93a89c.chunk.css.map": "/Company_ESG_Rating_App/static/css/main.0f93a89c.chunk.css.map",
+    "static/js/2.a706f759.chunk.js.LICENSE.txt": "/Company_ESG_Rating_App/static/js/2.a706f759.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.776abe2c.js",
-    "static/js/2.39942fb2.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.86aeb181.chunk.js"
+    "static/js/runtime-main.dea67e97.js",
+    "static/js/2.a706f759.chunk.js",
+    "static/css/main.0f93a89c.chunk.css",
+    "static/js/main.5818afa7.chunk.js"
   ]
 }
