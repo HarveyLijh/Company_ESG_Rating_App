@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d66c9d3c8f02a95e6508673a39dac7cd",
+    "revision": "ba9ae05fc8037200dcc503933c91a34c",
     "url": "/Company_ESG_Rating_App/index.html"
   },
   {
-    "revision": "89b462dca7e4ebf2d6de",
+    "revision": "ee9c3e35bb064e95f3b7",
     "url": "/Company_ESG_Rating_App/static/css/main.6942973f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Company_ESG_Rating_App/static/js/2.a706f759.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "89b462dca7e4ebf2d6de",
-    "url": "/Company_ESG_Rating_App/static/js/main.5818afa7.chunk.js"
+    "revision": "ee9c3e35bb064e95f3b7",
+    "url": "/Company_ESG_Rating_App/static/js/main.6d84bceb.chunk.js"
   },
   {
     "revision": "24b8b02c20a608c18c4a",
