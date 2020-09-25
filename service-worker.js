@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Company_ESG_Rating_App/precache-manifest.2dd356754f722249381b2fd8706ce322.js"
+  "/Company_ESG_Rating_App/precache-manifest.61dd66f20f77455a7eafcf1420e9fe9a.js"
 );
 
 self.addEventListener('message', (event) => {
