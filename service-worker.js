@@ -11,19 +11,13 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Company_ESG_Rating_App/precache-manifest.5f984d23854c02829f9bd23387ad0e49.js"
+  "/Company_ESG_Rating_App/precache-manifest.66fa5c9f49f40b963741baa28dfdd226.js"
 );
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-workbox.core.clientsClaim();
+workbox.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -31,9 +25,10 @@ workbox.core.clientsClaim();
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/Company_ESG_Rating_App/index.html"), {
+workbox.routing.registerNavigationRoute("/Company_ESG_Rating_App/index.html", {
   
-  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
+  blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
