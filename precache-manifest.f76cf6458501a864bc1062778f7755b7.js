@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "36517352b3f3dd5b44cd",
+    "revision": "90195c84d8d06d9158c3",
     "url": "/Company_ESG_Rating_App/static/css/main.2267781f.chunk.css"
   },
   {
-    "revision": "36517352b3f3dd5b44cd",
-    "url": "/Company_ESG_Rating_App/static/js/main.36517352.chunk.js"
+    "revision": "90195c84d8d06d9158c3",
+    "url": "/Company_ESG_Rating_App/static/js/main.90195c84.chunk.js"
   },
   {
-    "revision": "0aa13ac5962b6d580bcd",
+    "revision": "b3504e45c4b0c745c873",
     "url": "/Company_ESG_Rating_App/static/css/1.db1aa41c.chunk.css"
   },
   {
-    "revision": "0aa13ac5962b6d580bcd",
-    "url": "/Company_ESG_Rating_App/static/js/1.0aa13ac5.chunk.js"
+    "revision": "b3504e45c4b0c745c873",
+    "url": "/Company_ESG_Rating_App/static/js/1.b3504e45.chunk.js"
   },
   {
     "revision": "ca66fbc0f5335e23b3ab",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/Company_ESG_Rating_App/static/media/10.fe349e85.jpeg"
   },
   {
-    "revision": "a97942b2bdd99888e61a7322a6080c2f",
+    "revision": "2ca2d277e41d698ccdf7d7e6063bb59c",
     "url": "/Company_ESG_Rating_App/index.html"
   }
 ];
