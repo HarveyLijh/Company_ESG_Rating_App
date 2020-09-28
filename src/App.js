@@ -42,15 +42,15 @@ class App extends React.Component {
         that.setWeights(result);
       }
     }));
-   
+
   }
-   setCEIS(result) {
+  setCEIS(result) {
     this.company_CEIS = result;
     console.log(this.company_CEIS)
   }
-   setWeights(result) {
+  setWeights(result) {
     this.agency_weights = result;
-    console.log( this.agency_weights)
+    console.log(this.agency_weights)
   }
   render() {
     //search
@@ -59,7 +59,7 @@ class App extends React.Component {
         <Row>
 
           <Col
-            className="main-content p-0"
+            className="main-content p-3"
             sm="12"
             tag="main"
           >

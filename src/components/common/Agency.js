@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import shortid from "shortid";
 import { Card, CardBody } from "shards-react";
-
+import "../../assets/style.css"
 import Chart from "../../utils/chart";
 
 class Agency extends React.Component {
@@ -16,6 +16,7 @@ class Agency extends React.Component {
   componentDidMount() {
     const chartOptions = {
       ...{
+        
         maintainAspectRatio: true,
         responsive: true,
         legend: {
@@ -227,6 +228,10 @@ class Agency extends React.Component {
       "stats-small__percentage",
       `stats-small__percentage--${increase ? "increase" : "decrease"}`
     );
+    const seasonClasses = classNames(
+      "stats-small__label",
+      "season_label"
+    );
 
     const canvasHeight = variation === "1" ? 120 : 60;
 
@@ -236,7 +241,7 @@ class Agency extends React.Component {
           <div className={innerWrapperClasses}>
             <div className={dataFieldClasses}>
               <span className={agencyClasses}>{agency_name}</span>
-              <span className={agencyClasses}>{season}</span>
+              <span className={seasonClasses}>{season}</span>
               <h6 className={valueClasses}>{value}</h6>
             </div>
             <div className={innerDataFieldClasses}>

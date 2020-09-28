@@ -9,12 +9,16 @@ import Agency from "../components/common/Agency";
 // import NewDraft from "./../components/blog/NewDraft";
 // import Discussions from "./../components/blog/Discussions";
 // import TopReferrals from "./../components/common/TopReferrals";
-
+const getLocalDate = () => {
+  var date = new Date().toLocaleDateString();
+  var arr = date.split("/");
+  return arr[2]+"/" + arr[0]+"/" +arr[1];
+}
 const Company = ({ agency_props }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
+      <PageTitle title="中国平安" subtitle="SH601318" className="text-sm-left mb-3" />
     </Row>
 
     {/* Small Stats Blocks */}
@@ -77,9 +81,9 @@ Company.propTypes = {
 Company.defaultProps = {
   agency_props: [
     {
-      agency_name: "Posts",
+      agency_name: "商道融绿",
       season: "2020Q4",
-      value: "2,390",
+      value: "A+",
       percentage: "4.7%",
       increase: true,
       chartLabels: ["Rate", "Rate", "Rate", "Rate", "Rate", "Rate", "Rate"],
@@ -89,17 +93,17 @@ Company.defaultProps = {
           label: "Agency",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(0, 184, 216, 0.1)",
-          borderColor: "rgb(0, 184, 216)",
+          backgroundColor: "rgba(0, 184, 216,0.8)",
+          borderColor: "rgb(0,0,0,0)",
           data: [1, 1, 2, 1, 3, 5, 4, 7],
           barPercentage: 1.0,
         }
       ],
     },
     {
-      agency_name: "Pages",
+      agency_name: "社投盟",
       season: "2020Q2",
-      value: "182",
+      value: "B+",
       percentage: "12.4",
       increase: true,
       chartLabels: ["Rate", "Rate", "Rate", "Rate", "Rate", "Rate", "Rate"],
@@ -109,17 +113,17 @@ Company.defaultProps = {
           label: "Agency",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(23,198,113,0.1)",
-          borderColor: "rgb(23,198,113)",
+          backgroundColor: "rgba(23,198,113,0.8)",
+          borderColor: "rgb(0,0,0,0)",
           data: [1, 2, 3, 3, 3, 4, 4],
           barPercentage: 1.0,
         }
       ]
     },
     {
-      agency_name: "Comments",
+      agency_name: "富时罗素",
       season: "2020Q3",
-      value: "8,147",
+      value: "51.83",
       percentage: "3.8%",
       increase: false,
       decrease: true,
@@ -130,17 +134,17 @@ Company.defaultProps = {
           label: "Agency",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,180,0,0.1)",
-          borderColor: "rgb(255,180,0)",
+          backgroundColor: "rgba(255,180,0,0.8)",
+          borderColor: "rgb(0,0,0,0)",
           data: [2, 3, 3, 3, 4, 3, 3],
           barPercentage: 1.0,
         }
       ]
     },
     {
-      agency_name: "New Customers",
-      season: "2019Q1",
-      value: "29",
+      agency_name: "自定义",
+      season: getLocalDate(),
+      value: "AAA",
       percentage: "2.71%",
       increase: false,
       decrease: true,
@@ -151,8 +155,8 @@ Company.defaultProps = {
           label: "Agency",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,65,105,0.1)",
-          borderColor: "rgb(255,65,105)",
+          backgroundColor: "rgba(255,65,105,0.8)",
+          borderColor: "rgb(0,0,0,0)",
           data: [1, 7, 1, 3, 1, 4, 8],
           barPercentage: 1.0,
         }

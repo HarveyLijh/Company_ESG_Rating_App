@@ -13,9 +13,13 @@ const MainNavbar = ({ layout, stickyTop }) => {
     "bg-white",
     stickyTop && "sticky-top"
   );
-
+const nav_style={
+  "marginLeft": "3.127rem",
+  "marginRight": "3.127rem",
+  "minWidth": "320px"
+}
   return (
-    <div className={classes}>
+    <div className={classes} style={nav_style}>
       <Container className="p-0">
         <Navbar type="light" className="align-items-stretch flex-md-nowrap p-0">
           <NavbarSearch />
