@@ -31,6 +31,7 @@ const Company = ({ agency_props }) => (
             chartData={stats.datasets}
             chartLabels={stats.chartLabels}
             // chartOptions={stats.chartOptions}
+            edit={stats.edit}
             agency_name={stats.agency_name}
             season={stats.season}
             value={stats.value}
@@ -145,6 +146,7 @@ Company.defaultProps = {
       agency_name: "自定义",
       season: getLocalDate(),
       value: "AAA",
+      edit:true,
       percentage: "2.71%",
       increase: false,
       decrease: true,

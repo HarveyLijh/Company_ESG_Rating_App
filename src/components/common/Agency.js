@@ -2,21 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import shortid from "shortid";
-import { Card, CardBody } from "shards-react";
+import { Card, CardBody, Button } from "shards-react";
+import { useHistory, BrowserRouter as Router, Link,Switch,Route, } from "react-router-dom";
 import "../../assets/style.css"
 import Chart from "../../utils/chart";
 
 class Agency extends React.Component {
   constructor(props) {
     super(props);
-
     this.canvasRef = React.createRef();
   }
 
   componentDidMount() {
     const chartOptions = {
       ...{
-        
+
         maintainAspectRatio: true,
         responsive: true,
         legend: {
@@ -27,8 +27,8 @@ class Agency extends React.Component {
           enabled: true,
           intersect: false,
           callbacks: {
-            label: function(tooltipItem) {
-                return '在此等级中共有'+Number(tooltipItem.yLabel) + '家公司';
+            label: function (tooltipItem) {
+              return '在此等级中共有' + Number(tooltipItem.yLabel) + '家公司';
             }
           }
           // custom: function (tooltipModel) {
@@ -185,8 +185,14 @@ class Agency extends React.Component {
     new Chart(this.canvasRef.current, chartConfig);
   }
 
+  // customize = () => {
+  //   let path = `./customize`;
+  //   let history = useHistory();
+  //   history.push(path);
+  //   console.log("AAAA")
+  // }
   render() {
-    const { variation, agency_name, season, value, percentage, increase } = this.props;
+    const { variation, agency_name, season, edit, value, percentage, increase } = this.props;
 
     const cardClasses = classNames(
       "stats-small",
@@ -232,29 +238,55 @@ class Agency extends React.Component {
       "stats-small__label",
       "season_label"
     );
-
+    const editClass = classNames(
+      "edit_card",
+      `edit_card--${edit ? "on" : "off"}`
+    );
     const canvasHeight = variation === "1" ? 120 : 60;
-
+    
+    function Customize() {
+      return (
+        <div>
+          <h2>Customize</h2>
+        </div>
+      );
+    }
     return (
-      <Card small className={cardClasses}>
-        <CardBody className={cardBodyClasses}>
-          <div className={innerWrapperClasses}>
-            <div className={dataFieldClasses}>
-              <span className={agencyClasses}>{agency_name}</span>
-              <span className={seasonClasses}>{season}</span>
-              <h6 className={valueClasses}>{value}</h6>
+      <Router>
+        <Card small className={cardClasses}>
+          <CardBody className={cardBodyClasses}>
+            <div className={innerWrapperClasses}>
+              <div className={dataFieldClasses}>
+                <Button className={editClass} outline theme="accent" size="sm" onClick={this.customize}>
+                  <Link to='/customize'>
+                    <i className="material-icons">edit</i>编辑
+                    </Link>
+                </Button>
+                <span className={agencyClasses}>{agency_name}</span>
+                <span className={seasonClasses}>{season}</span>
+                <h6 className={valueClasses}>{value}</h6>
+              </div>
+              <div className={innerDataFieldClasses}>
+                {/* <span className={percentageClasses}>{percentage}</span> */}
+              </div>
             </div>
-            <div className={innerDataFieldClasses}>
-              {/* <span className={percentageClasses}>{percentage}</span> */}
-            </div>
-          </div>
-          <canvas
-            height={canvasHeight}
-            ref={this.canvasRef}
-            className={`stats-small-${shortid()}`}
-          />
-        </CardBody>
-      </Card>
+            <canvas
+              height={canvasHeight}
+              ref={this.canvasRef}
+              className={`stats-small-${shortid()}`}
+            />
+          </CardBody>
+        </Card>
+        <Switch>
+          {/* <Route exact path="/">
+            <Home />
+          </Route> */}
+          <Route exact path="/customize">
+            <Customize />
+          </Route>
+        </Switch>
+
+      </Router>
     );
   }
 }
@@ -268,6 +300,10 @@ Agency.propTypes = {
    * The agency_name.
    */
   agency_name: PropTypes.string,
+  /**
+   * The edit.
+   */
+  edit: PropTypes.bool,
   /**
   * The rating season.
   */
@@ -306,6 +342,7 @@ Agency.defaultProps = {
   increase: true,
   percentage: 0,
   value: 0,
+  edit: false,
   agency_name: "Agency",
   season: "",
   chartOptions: Object.create(null),
