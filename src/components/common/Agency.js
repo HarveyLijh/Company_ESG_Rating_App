@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import shortid from "shortid";
 import { Card, CardBody, Button } from "shards-react";
-import { useHistory, BrowserRouter as Router, Link,Switch,Route, } from "react-router-dom";
 import "../../assets/style.css"
 import Chart from "../../utils/chart";
 
 class Agency extends React.Component {
   constructor(props) {
     super(props);
+
     this.canvasRef = React.createRef();
   }
 
@@ -185,12 +185,9 @@ class Agency extends React.Component {
     new Chart(this.canvasRef.current, chartConfig);
   }
 
-  // customize = () => {
-  //   let path = `./customize`;
-  //   let history = useHistory();
-  //   history.push(path);
-  //   console.log("AAAA")
-  // }
+  customize() {
+    console.log("customize")
+  }
   render() {
     const { variation, agency_name, season, edit, value, percentage, increase } = this.props;
 
@@ -243,50 +240,30 @@ class Agency extends React.Component {
       `edit_card--${edit ? "on" : "off"}`
     );
     const canvasHeight = variation === "1" ? 120 : 60;
-    
-    function Customize() {
-      return (
-        <div>
-          <h2>Customize</h2>
-        </div>
-      );
-    }
-    return (
-      <Router>
-        <Card small className={cardClasses}>
-          <CardBody className={cardBodyClasses}>
-            <div className={innerWrapperClasses}>
-              <div className={dataFieldClasses}>
-                <Button className={editClass} outline theme="accent" size="sm" onClick={this.customize}>
-                  <Link to='/customize'>
-                    <i className="material-icons">edit</i>编辑
-                    </Link>
-                </Button>
-                <span className={agencyClasses}>{agency_name}</span>
-                <span className={seasonClasses}>{season}</span>
-                <h6 className={valueClasses}>{value}</h6>
-              </div>
-              <div className={innerDataFieldClasses}>
-                {/* <span className={percentageClasses}>{percentage}</span> */}
-              </div>
-            </div>
-            <canvas
-              height={canvasHeight}
-              ref={this.canvasRef}
-              className={`stats-small-${shortid()}`}
-            />
-          </CardBody>
-        </Card>
-        <Switch>
-          {/* <Route exact path="/">
-            <Home />
-          </Route> */}
-          <Route exact path="/customize">
-            <Customize />
-          </Route>
-        </Switch>
 
-      </Router>
+    return (
+      <Card small className={cardClasses}>
+        <CardBody className={cardBodyClasses}>
+          <div className={innerWrapperClasses}>
+            <div className={dataFieldClasses}>
+              <Button className={editClass} outline theme="accent" size="sm" onClick={this.customize}>
+                <i className="material-icons">edit</i>编辑
+              </Button>
+              <span className={agencyClasses}>{agency_name}</span>
+              <span className={seasonClasses}>{season}</span>
+              <h6 className={valueClasses}>{value}</h6>
+            </div>
+            <div className={innerDataFieldClasses}>
+              {/* <span className={percentageClasses}>{percentage}</span> */}
+            </div>
+          </div>
+          <canvas
+            height={canvasHeight}
+            ref={this.canvasRef}
+            className={`stats-small-${shortid()}`}
+          />
+        </CardBody>
+      </Card>
     );
   }
 }
